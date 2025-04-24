@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Your Logo</h1>
+
+        <div class="form-group">
+            <label for="outputSize">Output Size (Width x Height):</label>
+            <input type="number" id="width" value="512" min="100" step="1"> x
+            <input type="number" id="height" value="512" min="100" step="1">
+        </div>
+        <div class="form-group">
+            <label for="padding">Padding:</label>
+            <input type="number" id="padding" value="0" min="0" step="1">
+        </div>
+        <div class="form-group">
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+        </div>
+        <div class="form-group">
+            <label for="cornerRadius">Corner Radius:</label>
+            <input type="number" id="cornerRadius" value="0" min="0" step="1">
+        </div>
+        <div class="form-group">
+            <label for="circleRadius">Circle Radius:</label>
+            <input type="number" id="circleRadius" value="13" min="1" step="1">
+        </div>
+        <div class="form-group">
+            <label for="lineThickness">Line Thickness:</label>
+            <input type="number" id="lineThickness" value="8" min="1" step="1">
+        </div>
+
+        <button id="generateBtn">Generate Logo</button>
+
+        <div class="output-container">
+            <div id="svgOutput"></div>
+        </div>
+
+        <a id="downloadLink" href="#" download="generated-logo.svg">
+            <button>Download Logo</button>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
