@@ -1,3 +1,4 @@
+/* Base reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,51 +6,73 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    padding: 40px;
+    color: #333;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+}
+
+.form-group, .form-group-row {
     margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
 label {
+    font-weight: 600;
+    margin-bottom: 6px;
     display: block;
-    margin-bottom: 5px;
 }
 
-input[type="number"], input[type="color"] {
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #519872;
+    outline: none;
+}
+
+input[type="color"] {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 button {
-    display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #519872;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    margin-top: 20px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -57,13 +80,31 @@ button:hover {
 }
 
 .output-container {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
 }
 
 #svgOutput {
     display: inline-block;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 20px;
+    border: 1px dashed #bbb;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #fafafa;
+    border-radius: 6px;
+}
+
+.form-group-row .inline-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group-row .inline-inputs input {
+    flex: 1;
+}
+
+.form-group-row .inline-inputs span {
+    padding: 0 5px;
+    font-weight: bold;
+    font-size: 18px;
 }
